@@ -1,0 +1,32 @@
+--Create a shoe store database
+
+CREATE TABLE Ts_shoes( 
+id integer PRIMARY KEY, 
+gender TEXT, 
+brand TEXT, 
+color TEXT, 
+price integer, 
+size integer); 
+
+INSERT into Ts_shoes VALUES (1,'M',"Air Jordan 1",'Grey',125, 10.5);
+INSERT into Ts_shoes VALUES (2,'M',"Air Jordan 1",'Grey',125, 11);
+INSERT into Ts_shoes VALUES (3,'M',"Air Jordan 1",'Grey',125, 11.5); 
+INSERT into Ts_shoes VALUES (4,'M',"Air Jordan 1",'Grey',125, 12);
+INSERT into Ts_shoes VALUES (5,'M',"Air Jordan 1 Retro High OG",'Yellow Toe', 140, 10.5);
+INSERT into Ts_shoes VALUES (6,'M',"Air Jordan 1 Retro High OG",'Yellow Toe', 140, 11);
+INSERT into Ts_shoes VALUES (7,'M',"Air Jordan 1 Retro High OG",'Yellow Toe', 140, 11.5);
+INSERT into Ts_shoes VALUES (8,'M',"Air Jordan 1 Retro High OG",'Yellow Toe', 140, 12);
+INSERT into Ts_shoes VALUES (9,'F',"Nike Air Max 270",'Black', 150, 9);
+INSERT into Ts_shoes VALUES (10,'F',"Nike Air Max 270",'Black', 180, 11);
+INSERT into Ts_shoes VALUES (11,'F',"Adidas Yeezy Foam Runners",'Slate', 399, 7.5);
+INSERT into Ts_shoes VALUES (12,'F',"Adidas Yeezy Foam Runners", 'Black', 300, 9);
+INSERT into Ts_shoes VALUES (13,'F',"New Balance 237",'Purple', 79.99, 8);
+INSERT into Ts_shoes VALUES (14,'F',"New Balance W990GL6",'Grey', 199.95, 6);
+
+--display the database ordered by price.
+
+select * from Ts_shoes ORDER BY price;
+
+--what is the sum price of each shoe brand
+
+select brand, sum(price) from Ts_shoes GROUP BY brand;
